@@ -23,6 +23,12 @@
                         <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"></span>
                     </div>
                     <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" th:field="*{password}" class="form-control"  placeholder="Enter password">
+                        <small id="passwordError" class="form-text text-error"
+                           th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Validation error</small>
+                    </div>
+                    <div class="form-group">
                         <label for="age" class="col-form-label">Age</label>
                         <input type="text" th:field="*{age}" class="form-control" id="age">
                         <span th:if="${#fields.hasErrors('age')}" th:errors="*{age}" class="text-danger"></span>
